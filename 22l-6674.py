@@ -13,13 +13,15 @@ def q1():
     plt.title('Box Plot of Group A')
     plt.ylabel('Values')
     plt.show()
-
+    plt.savefig("Q1 GroupA plot")
+    
     plt.suptitle("Group B")
     plt.boxplot(group_B, labels=['Group B'], showfliers=True) 
     plt.title('Box Plot of Group B')
     plt.ylabel('Values')
     plt.show()
-
+    plt.savefig("Q1 GroupB plot")
+    
 def q2():
     file = open("genome.txt", "r")
     genome_text = file.read()
@@ -49,7 +51,8 @@ def q2():
     ax.set_zlabel("Z") 
     ax.set_title("Genome Visualization") 
     
-    plt.show() 
+    plt.show()
+    plt.savefig("Q2 Genome Visualization") 
  
 def q3():
     img = Image.open('stalin.jpg')
@@ -57,13 +60,17 @@ def q3():
     plt.imshow(np.rot90(numpydata))
     plt.title("Rotated")
     plt.show()
+    plt.savefig("Q3 ROT90")
     plt.imshow(np.fliplr(numpydata))
     plt.title("Flipped")
     plt.show()
+    plt.savefig("Q3 FLIPPED")
     gray_img = np.dot(numpydata[..., :3], [0.299, 0.587, 0.114]) 
     plt.imshow(gray_img, cmap='gray')
     plt.title("Gray Image")
     plt.show()
+    plt.savefig("Q3 GRAY-IMAGE")
+    
 
 def q4():
     # Load the Iris dataset  
@@ -94,6 +101,7 @@ def q4():
     plt.scatter(sepal_length, sepal_width)
     plt.title("Sepal Length vs Sepal Width")
     plt.show()
+    plt.savefig("Q4 Sepal Length vs Sepal Width")
     
     plt.hist(sepal_length, bins=30, color='skyblue', edgecolor='black')
     
@@ -101,10 +109,12 @@ def q4():
     plt.title('Histogram of Sepal Length')
     
     plt.show()
+    plt.savefig("Q4 Histogram")
     
     plt.plot(petal_length, petal_width)
     plt.title("Petal Length vs Petal Width")
     plt.show()
+    plt.savefig("Q4 Petal Length vs Petal Width")
     
 if __name__ == "__main__":
     q4()
