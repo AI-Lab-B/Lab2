@@ -41,5 +41,6 @@ gray_img = np.dot(img_array[..., :3], [0.299, 0.587, 0.114])
 plt.figure(figsize=(5,5))
 plt.imshow(gray_img, cmap='gray')  
 plt.title("Grayscale Image")
+plt.savefig("Q3-1")
 
 plt.show()

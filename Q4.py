@@ -34,7 +34,8 @@ plt.scatter(X[:, 0], X[:, 1], c=Y)
 plt.xlabel("Sepal Length (cm)")
 plt.ylabel("Sepal Width (cm)")
 plt.title("Sepal Length vs. Sepal Width")
-
+plt.show()
+plt.savefig("Q4 scatter plot")
 
 #  histogram 
 plt.subplot(1, 3, 2)
@@ -42,7 +43,8 @@ plt.hist(X[:, 0], bins=10, edgecolor='black')
 plt.xlabel("Sepal Length (cm)")
 plt.ylabel("Frequency")
 plt.title("Distribution of Sepal Length")
-
+plt.show()
+plt.savefig("Q4 histogram")
 
 # petal plot
 plt.subplot(1, 3, 3)
@@ -54,3 +56,5 @@ plt.title("Petal Length vs. Petal Width")
 
 plt.tight_layout()
 plt.show()
+plt.show()
+plt.savefig("Q4 petal plot")
